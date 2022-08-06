@@ -15,7 +15,9 @@ img {
   width: 80%;
 }
 
-button {
+/* moved code to activity.css */
+
+/* button {
   padding: 1em;
   margin: .2em;
   font-family: 'Josefin Sans', sans-serif;
@@ -24,4 +26,4 @@ button {
 
 button:hover {
   background-color: cornflowerblue;
-}
+} */
