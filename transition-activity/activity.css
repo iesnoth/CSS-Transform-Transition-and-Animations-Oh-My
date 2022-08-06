@@ -1,15 +1,60 @@
 button {
-    padding: 1em;
-    margin: .2em;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.5em;
-    background-color: ghostwhite;
-  }
-  
-  button:hover {
-    background-color: cornflowerblue;
-  }
-  
-button{
-    transition: 2s;
+  padding: 1em;
+  margin: .2em;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5em;
+  background-color: ghostwhite;
 }
+
+button:hover {
+  background-color: cornflowerblue;
+}
+
+button {
+  transition: 2s;
+}
+
+/* BONUS
+when hovering over the image, the caption
+title and text overlays the image */
+
+.caption{
+  position:relative;
+  overflow:hidden;
+}
+
+.background{
+  display:block;
+  min-width: 100%;
+  max-width: 100%;
+  height:auto;
+}
+
+.article-container{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  color: white;
+  transform: translateY(100%);
+  transition: transform .35s ease-out;
+}
+
+.caption:hover .article-container{
+  transform: translateY(0);
+}
+
+.overlay-title{
+  margin:0;
+  padding: 0 0 12px;
+  transform: translateY(calc(-100% - 10px));
+  transition: transform .35s ease-out;
+}
+
+.caption:hover .overlay-title{
+  transform: translateY(0);
+}
+
+/* Background shadow */
