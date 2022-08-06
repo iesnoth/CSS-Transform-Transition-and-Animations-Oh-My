@@ -1,17 +1,21 @@
-.hamburger:hover > div:nth-child(1){
+/* The middle line div needs to 'disappear'.
+The bottom line div needs to 'rotate' so that it goes from bottom left to top right.
+The top line div needs to 'rotate' so that it goes top left to bottom right. */
+
+.hamburger:hover>div:nth-child(1) {
   background-color: ghostwhite;
   animation-name: top;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
-.hamburger:hover > div:nth-child(2){
+.hamburger:hover>div:nth-child(2) {
   animation-name: middle;
   animation-duration: .1s;
   animation-fill-mode: forwards;
 }
 
-.hamburger:hover > div:nth-child(3){
+.hamburger:hover>div:nth-child(3) {
   background-color: ghostwhite;
   animation-name: bottom;
   animation-duration: 1s;
@@ -23,21 +27,28 @@ nav {
   transition-duration: 1s;
 }
 
-.hamburger:hover ~ nav {
+.hamburger:hover~nav {
   opacity: 1;
 }
 
+/* 45deg */
 @keyframes top {
   from {}
-  to {}
+
+  to {transform:rotate(45deg) translate(13px);
+    transform-origin:left;}
 }
 
 @keyframes middle {
-  from {}
-  to {}
+  from {background-color:rebeccapurple}
+
+  to {background-color: mediumvioletred;}
 }
 
+/* -45deg */
 @keyframes bottom {
   from {}
-  to {}
+
+  to {transform:rotate(-45deg) translate(13px);
+    transform-origin:left;}
 }
